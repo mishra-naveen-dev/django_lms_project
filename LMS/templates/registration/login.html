@@ -31,10 +31,11 @@
         <div class="col-md-7 col-xl-4 mx-auto">
             <!-- Login -->
             <h3 class="mb-6">Log In to Your Edu Account!</h3>
+            {% include 'components/msg.html' %}
 
             <!-- Form Login -->
             <form class="mb-5" method="post" action="{% url 'doLogin' %}">
-                {%csrf token %}
+                {% csrf_token %}
                 <!-- Email -->
                 <div class="form-group mb-5">
                     <label for="modalSigninEmail1">
